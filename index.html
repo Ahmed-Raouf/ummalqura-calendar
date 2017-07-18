@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>jQuery Calendars Datepicker</title>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="css/ummalqura.calendars.picker.css">
+
+<link rel="stylesheet" href="css/site.css" />
+
+
+</head>
+<body dir="rtl">
+
+<div class="container">
+    
+
+      <div class="">
+      
+		<div class="form-horizontal">
+				<div style="display: none;">
+					<span class="input-group-addon" id="calImg">
+						<span class="glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+						<div class="form-group">
+                        <label class="col-sm-2 text-right">التاريخ</label>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+							
+							<input type="text" id="pickCalGer" class="form-control" readonly="readonly">
+							 <span class="input-group-addon">ميلادي</span>
+							</div>
+							</div>
+							
+							  <div class="col-sm-4">
+                                        <div class="input-group">
+
+				
+					
+					<input type="text" id="pickCalHj" class="form-control" readonly="readonly">
+					 <span class="input-group-addon">هجري</span>
+				</div> 
+				 </div>
+		   </div>
+		
+      </div>  
+	  </div>
+
+    
+      <footer class="footer">
+       
+      </footer>
+
+    </div> <!-- /container -->
+
+
+</body>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.calendars.js"></script>
+<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+<script type="text/javascript" src="js/jquery.calendars.plus.js"></script>
+<script type="text/javascript" src="js/jquery.calendars.picker.js"></script>
+<script type="text/javascript" src="js/jquery.calendars.picker-ar.js"></script>
+<script type="text/javascript" src="js/jquery.calendars.ummalqura.js"></script>
+<script type="text/javascript" src="js/jquery.calendars.ummalqura-ar.js"></script>
+<script type="text/javascript" src="js/calendar-convert.js"></script>
+
+
+<script type="text/javascript">
+
+	var calGer = $.calendars.instance();
+    var calHj = $.calendars.instance('ummalqura', 'ar');
+					
+	$(function() {
+	
+		$('#pickCalGer').calendarsPicker($.extend({
+			calendar: calGer,
+			onSelect: function (date) {
+				convertDtFromGerToHijri(date, 'pickCalHj');
+			},
+			showTrigger: '#calImg',
+			dateFormat: 'dd/mm/yyyy',
+		}));
+
+		$('#pickCalHj').calendarsPicker($.extend({
+			calendar: calHj,
+			onSelect: function (date) {
+				convertDtFromHijriToGer(date, 'pickCalGer');
+			},
+			showTrigger: '#calImg',
+			dateFormat: 'dd/mm/yyyy',
+		},
+			$.calendarsPicker.regionalOptions['ar'])
+		);		
+		
+	});
+</script>
+
+</html>
