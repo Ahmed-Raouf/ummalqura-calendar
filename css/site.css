@@ -1,0 +1,223 @@
+﻿@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+
+
+body {
+	
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+[dir="rtl"] .dropdown-menu {
+    text-align: right;
+    left: auto;
+}
+
+[dir="rtl"] * {
+    direction: rtl;
+}
+
+@media (min-width: 768px) {
+    [dir="rtl"] [class*="col-lg-"], [dir="rtl"] [class*="col-md-"], [dir="rtl"] [class*="col-sm-"] {
+        float: right;
+    }
+}
+
+[class*="col-lg-"], [class*="col-md-"], [class*="col-sm-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+[dir="rtl"] .pull-left, [dir="rtl"] .navbar-left {
+    float: right !important;
+}
+
+[dir="rtl"] .navbar-nav,
+[dir="rtl"] .nav-tabs {
+    float: right !important;
+    padding-right: 0;
+}
+
+[dir="rtl"] .media-left,
+[dir="rtl"] .media > .pull-left {
+    float: right !important;
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+[dir="rtl"] .media-list {
+    padding-left: 0;
+    list-style: none;
+    padding-right: 0;
+}
+
+[dir="rtl"] .navbar-nav > li,
+[dir="rtl"] .nav-tabs > li {
+    float: right;
+    position: inherit;
+}
+
+[dir="rtl"] .control-sidebar-tabs > li {
+    float: unset !important;
+}
+
+
+@media (max-width: 768px) {
+
+    [dir="rtl"] .navbar-toggle {
+        position: relative;
+        float: left;
+    }
+
+    [dir="rtl"] .menu.nav.navbar-nav {
+        width: 100%;
+        clear: both;
+    }
+
+
+    [dir="rtl"] .navbar-nav > li,
+    [dir="rtl"] .nav-tabs > li {
+         position: inherit;
+    }
+
+
+    [dir="rtl"] .menu.secondary {
+        clear: both;
+    }
+
+    [dir="rtl"] .nav.navbar-nav.navbar-right {
+        float: left;
+    }
+}
+
+[dir="rtl"] .region {
+    clear: right;
+}
+
+[dir="rtl"] .pull-right, [dir="rtl"] .navbar-right {
+    float: left !important;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+[dir="rtl"] .close {
+    float: left !important;
+}
+
+[dir="rtl"] .modal-title {
+    padding-right: 25px;
+}
+
+[dir="rtl"] .radio input[type="radio"],
+[dir="rtl"] .radio-inline input[type="radio"],
+[dir="rtl"] .checkbox input[type="checkbox"],
+[dir="rtl"] .checkbox-inline input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: -20px;
+}
+
+[dir="rtl"] .radio label,
+[dir="rtl"] .checkbox label {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+[dir="rtl"] .pagination > li > a, [dir="rtl"] .pagination > li > span {
+    float: right;
+}
+
+
+[dir="rtl"] .pagination > li:first-child > a, [dir="rtl"] .pagination > li:first-child > span {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-right: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+[dir="rtl"] .pagination > li:last-child > a, [dir="rtl"] .pagination > li:last-child > span {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+[dir="rtl"] .logo {
+    float: right;
+}
+
+[dir="rtl"] .input-group[class*="col-"] {
+    padding-right: 8px;
+}
+
+[dir="rtl"] .input-group-addon:first-child {
+    border-left: 0;
+    border-right: 1px solid #d2d6de;
+}
+
+    [dir="rtl"] .input-group .form-control:first-child, [dir="rtl"] .input-group-addon:first-child, [dir="rtl"] .input-group-btn:first-child > .btn, [dir="rtl"] .input-group-btn:first-child > .btn-group > .btn, [dir="rtl"] .input-group-btn:first-child > .dropdown-toggle, [dir="rtl"] .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, [dir="rtl"] .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+[dir="rtl"] .input-group-btn:last-child > .btn,
+[dir="rtl"] .input-group-btn:last-child > .btn-group {
+    margin-right: -1px;
+    margin-left: 0px;
+}
+
+    [dir="rtl"] .input-group .form-control:last-child,
+    [dir="rtl"] .input-group-addon:last-child,
+    [dir="rtl"] .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+    [dir="rtl"] .input-group-btn:first-child > .btn:not(:first-child),
+    [dir="rtl"] .input-group-btn:last-child > .btn,
+    [dir="rtl"] .input-group-btn:last-child > .btn-group > .btn,
+    [dir="rtl"] .input-group-btn:last-child > .dropdown-toggle {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+
+
+[dir="rtl"] .form-control-feedback {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .has-feedback .form-control {
+    padding-right: 10px;
+    padding-left: 42.5px;
+}
+
+
+[dir="rtl"] th {
+ text-align:right;
+}
+
+
+[dir="rtl"] .input-group-addon:last-child {
+    border-right: 0;
+    border-left: 1px solid #ccc;
+}
+
+
+.header {
+    border-bottom: 1px solid #ddd;
+}
+
+.footer{
+	border-top: 1px solid #ddd;
+padding-top: 10px;
+
+}
